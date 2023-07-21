@@ -1,36 +1,49 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '../styles/Home.module.css'
-import { AppLayout } from '../components/layouts/AppLayout'
+import styles from "../styles/Home.module.css";
+import { AppLayout } from "../components/layouts/AppLayout";
 import Main from "../components/Main";
-
-const inter = Inter({ subsets: ['latin'] })
+import { useState } from "react";
+import axios from "axios";
+import { useSession } from "next-auth/react";
+import useFetchTodo from "../hooks/useFetchTodo";
 
 export default function Home() {
+  const { data: session } = useSession();
+  const [titleText, setTitleText] = useState("");
+  const { todos, mutate } = useFetchTodo(session ? session?.user.id : null);
 
-  const onClickAdd = () => {
-    alert('');
-     
-  }
+  const createTodo = async () => {
+    try {
+      if (titleText === "") return;
+      await axios.post("/api/todos", {
+        user_id: session ? session.user.id : null,
+        title: titleText,
+      });
+      setTitleText("");
+      mutate();
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
-    
-      
-      <AppLayout>
-
+    <AppLayout>
       <div className={styles.homeContainer}>
-          
-          <h1 className={styles.homeTodoTitle}>TODO</h1>
-            <div className={styles.inputContent}>
-              <input placeholder='TODOを入力' className={styles.inputText}></input>
-              <button className={styles.AddButton} onClick={()=> onClickAdd()}>追加</button>
-            </div>
-  
+        <h1 className={styles.homeTodoTitle}>TODO</h1>
+        <div className={styles.inputContent}>
+          <input
+            placeholder="TODOを入力"
+            className={styles.inputText}
+            value={titleText}
+            onChange={(event) => setTitleText(event.target.value)}
+          />
+          <button className={styles.AddButton} onClick={createTodo}>
+            追加
+          </button>
+        </div>
       </div>
-      <Main />
-
-      </AppLayout>
-    
-  )
+      {session && todos && (
+        <Main user={session.user} todoData={todos.data} mutate={mutate} />
+      )}
+    </AppLayout>
+  );
 }

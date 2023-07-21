@@ -1,27 +1,39 @@
 .dndContent {
-    display: flex;
-    align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 }
 
 .dndSection {
-    width: 300px;
-    background-color: #B0C4DE;
-    padding: 10px;
-    border-radius: 10px;
-    margin-left: 25px;
+  width: 300px;
+  background-color: #b0c4de;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 25px;
 }
 
 .dndSectionTitle {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin: 10px 0px 10px;
-    color: aliceblue;
-    padding: 30px auto;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 10px 0px 10px;
+  color: #ffffff;
+  padding: 30px auto;
 }
 
 .card {
-    padding: 30px;
-    background: #FFFACD;
-    border-radius: 10px;
-    margin-top: 10px;
-  }
+  font-family: sans-serif;
+  font-weight: 550;
+  color: #696969;
+  padding: 30px;
+  background: #fffacd;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+}
+
+.trashButton {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}

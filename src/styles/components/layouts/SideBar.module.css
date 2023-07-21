@@ -1,12 +1,48 @@
 .container {
-    position: sticky;
-    top: 0;
-    bottom: 0;
-    padding: 16px 32px;
-    height: 100vh;
-    width: 272px;
-    min-width: 272px;
-    background-color: #fff;
-    overflow: auto;
-    color: black;
-  }
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 272px;
+  min-width: 272px;
+  background-color: #add8e6;
+  overflow: auto;
+}
+
+.SideBarList {
+  padding: 0;
+  margin: 0;
+  height: auto;
+}
+
+.SideBarList #active {
+  background-color: #ffff00;
+}
+
+.row {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  display: flex;
+  height: 60px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.row:hover {
+  cursor: pointer;
+  background-color: #b0c4de;
+}
+
+.SideBarIcon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.SideBarTitle {
+  flex: 70%;
+}

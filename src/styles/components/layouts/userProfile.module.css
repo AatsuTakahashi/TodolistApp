@@ -1,0 +1,30 @@
+.userProfileTop {
+  background-color: #fff8dc;
+  height: 100%;
+}
+
+.userProfileContent {
+  padding-top: 30px;
+  padding-left: 50px;
+  font-size: 30px;
+  color: #696969;
+}
+
+.userProfileImage {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  border-radius: 50%;
+}
+
+.userProfileEmail {
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #696969;
+}
+
+.userProfile {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

@@ -9,17 +9,61 @@
   padding: 13px;
   padding-right: 200px;
   font-size: 20px;
+  border: none;
+  outline: none;
 }
 
 .AddButton {
-  /* white-space: nowrap; */
   border-radius: 5px;
   padding: 10px 16px;
   margin-left: 13px;
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  color: #ffffff;
+  background-color: #ffb6c1;
 }
 
 .homeTodoTitle {
   text-align: center;
+  font-family: sans-serif;
+  color: #696969;
+}
+
+.signInHome {
+  position: relative;
+}
+
+.signInItem {
+  position: absolute;
+  top: 35%;
+  left: 43%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-right: 300px;
+  margin-top: 100px;
+  margin-left: 100px;
+  padding: 20px;
+  background: #f8f8ff;
+  border-radius: 30px;
+  border: solid;
+}
+
+.signInTitle {
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
+.signInButton {
+  cursor: pointer;
   font-size: 35px;
+  border-radius: 5px;
+  padding: 0.5px 18px;
+  font-family: sans-serif;
+  color: #a9a9a9;
+}
+
+.signInContent {
+  margin-left: 5px;
 }
