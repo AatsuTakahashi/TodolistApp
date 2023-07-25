@@ -1,8 +1,12 @@
-import { signIn } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 
 const SignIn = () => {
+  const { data: session } = useSession();
+  if (session) {
+    signOut();
+  }
   return (
     <>
       <div className={styles.signInHome}>
