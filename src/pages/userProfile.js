@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../styles/components/layouts/userProfile.module.css";
 import { AppLayout } from "../components/layouts/AppLayout";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 const userProfile = () => {
   const { data: session, status } = useSession();
