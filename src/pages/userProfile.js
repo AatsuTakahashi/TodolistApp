@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import styles from "../styles/components/layouts/userProfile.module.css";
 import { AppLayout } from "../components/layouts/AppLayout";
 import { useSession } from "next-auth/react";
 
-const userProfile = (props) => {
-  const { data: session } = useSession();
+const userProfile = () => {
+  const { data: session, status } = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (status === "unauthenticated") router.push("/sign_in");
+  }, [status, router]);
+
   return (
     <AppLayout>
       <div className={styles.userProfileTop}>

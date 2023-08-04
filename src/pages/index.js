@@ -1,13 +1,20 @@
 import styles from "../styles/Home.module.css";
 import { AppLayout } from "../components/layouts/AppLayout";
 import Main from "../components/Main";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useSession } from "next-auth/react";
 import useFetchTodo from "../hooks/useFetchTodo";
+import { useRouter } from "next/router";
 
 export default function Home() {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (status === "unauthenticated") router.push("/sign_in");
+  }, [status, router]);
+
   const [titleText, setTitleText] = useState("");
   const { todos, mutate } = useFetchTodo(session ? session?.user.id : null);
 
