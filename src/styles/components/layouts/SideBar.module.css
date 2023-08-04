@@ -25,9 +25,6 @@
   text-decoration: none;
   display: flex;
   height: 60px;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 25px;
   justify-content: center;
   align-items: center;
 }
@@ -41,8 +38,12 @@
   flex: 30%;
   display: grid;
   place-items: center;
+  color: #fff;
 }
 
 .SideBarTitle {
   flex: 70%;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
 }
