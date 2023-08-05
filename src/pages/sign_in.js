@@ -13,8 +13,6 @@ const SignIn = () => {
         <div className={styles.signInHomeImage}>
           <Image
             src={"/sign_in.png"}
-            // width={1000}
-            // height={400}
             width={0}
             height={0}
             sizes="100vw"
