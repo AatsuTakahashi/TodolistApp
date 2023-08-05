@@ -15,7 +15,7 @@ export const SideBarData = [
     link: "/userProfile",
   },
   {
-    title: "サインアウト",
+    title: "ログアウト",
     icon: <LogoutIcon />,
     link: "/sign_in",
   },

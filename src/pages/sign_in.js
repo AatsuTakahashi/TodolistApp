@@ -33,10 +33,10 @@ const SignIn = () => {
             className={styles.signInButton}
             onClick={() => signIn("google", { callbackUrl: "/" })}
           >
-            SignIn With Google
+            LogIn With Google
           </button>
           <p className={styles.signInContent}>
-            Googleアカウントを使って、サインインして下さい。
+            Googleアカウントを使って、ログインして下さい。
           </p>
         </div>
       </div>
