@@ -5,7 +5,10 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <title>Todoアプリ</title>
-        <meta name="description" content="Todoリストを作成しましょう" />
+        <meta
+          name="description"
+          content="PC用Todoアプリです。Todoリストを作成しましょう"
+        />
         <link rel="icon" href="/logoImage.png" />
       </Head>
       <body>
