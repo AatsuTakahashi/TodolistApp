@@ -9,7 +9,12 @@ export const SideBar = () => {
       <ul className={styles.SideBarList}>
         {SideBarData.map((value, key) => {
           return (
-            <Link key={key} className={styles.row} href={value.link}>
+            <Link
+              key={key}
+              className={styles.row}
+              href={value.link}
+              underline="none"
+            >
               <div id="icon" className={styles.SideBarIcon}>
                 {value.icon}
               </div>
