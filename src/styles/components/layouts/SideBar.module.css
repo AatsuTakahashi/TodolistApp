@@ -26,6 +26,7 @@
   height: 60px;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 .row:hover {
