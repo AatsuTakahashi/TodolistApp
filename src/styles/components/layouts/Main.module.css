@@ -1,6 +1,7 @@
 .dndContent {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .dndSection {
@@ -8,8 +9,8 @@
   background-color: #b0c4de;
   padding: 10px;
   border-radius: 10px;
-  margin-left: 4%;
-  margin-right: 0.5%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .dndSectionTitle {
